@@ -43,15 +43,6 @@ const VueRippler = {
               ripple = this
               rippler = document.createElement('span')
 
-              // rippler.style.webkitTransform = 'scale(0)';
-              // rippler.style.transform =       'scale(0)';
-              // rippler.style.borderRadius = '100%';
-              // rippler.style.position = 'absolute';
-              // rippler.style.opacity = '0.5';
-              // rippler.style.backgroundColor = 'rgba(0, 0, 0, 0.1)';
-              // rippler.style.webkitAnimation = 'ripple 1000ms';
-              // rippler.style.animation =       'ripple 1000ms';
-
               size = ripple.offsetWidth
               pos = ripple.getBoundingClientRect()
               x = e.pageX - pos.left - (size / 2)
@@ -73,17 +64,17 @@ const VueRippler = {
         for (i = 0, len = ripples.length; i < len; i++) {
           ripple = ripples[i]
 
-          // ripple.style.position = 'relative';
-          // ripple.style.overflow = 'hidden';
+          ripple.style.position = 'relative';
+          ripple.style.overflow = 'hidden';
 
           rippleContainer = document.createElement('div')
           rippleContainer.className = 'ripple--container'
 
-          // rippleContainer.style.position = 'absolute';
-          // rippleContainer.style.top = '0';
-          // rippleContainer.style.right = '0';
-          // rippleContainer.style.bottom = '0';
-          // rippleContainer.style.left = '0';
+          rippleContainer.style.position = 'absolute';
+          rippleContainer.style.top = '0';
+          rippleContainer.style.right = '0';
+          rippleContainer.style.bottom = '0';
+          rippleContainer.style.left = '0';
 
           ripple.addEventListener('mousedown', showRipple)
           ripple.addEventListener('mouseup', debounce(cleanUp, 2000))
