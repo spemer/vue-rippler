@@ -1,11 +1,10 @@
 <template>
-  <div class="example" ripple="ripple">
-  </div>
+  <div class="example" ripple="ripple"></div>
 </template>
 
 <script>
 export default {
-  name: 'app',
+  name: 'app'
 }
 </script>
 
@@ -45,5 +44,4 @@ export default {
             transform: scale(2);
   }
 }
-
 </style>
