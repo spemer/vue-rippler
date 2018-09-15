@@ -34,6 +34,19 @@ Vue.use(VueRippler)
 ``` css
 <style>
 /* play with lines below */
+[ripple] {
+  position: relative;
+  overflow: hidden;
+}
+
+[ripple] .ripple--container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
 [ripple] .ripple--container span {
   -webkit-transform: scale(0);
           transform: scale(0);
