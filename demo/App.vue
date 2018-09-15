@@ -10,12 +10,12 @@ export default {
 
 <style>
 .example {
-  width: 160px;
-  height: 40px;
+  width: 320px;
+  height: 80px;
   outline: none;
+  margin: 0 auto;
   cursor: pointer;
-  border: 1px solid #999;
-  background-color: #fff;
+  background-color: #42b883;
 }
 
 [ripple] .ripple--container span {
@@ -23,8 +23,8 @@ export default {
           transform: scale(0);
   border-radius: 100%;
   position: absolute;
-  opacity: 0.5;
-  background-color: rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.1);
   -webkit-animation: ripple 1000ms;
           animation: ripple 1000ms;
 }

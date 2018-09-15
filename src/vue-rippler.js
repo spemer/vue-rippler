@@ -48,7 +48,17 @@ const VueRippler = {
               x = e.clientX - pos.left - (size / 2);
               y = e.clientY - pos.top - (size / 2);
               style = 'top:' + y + 'px;left: ' + x + 'px; height: ' + size + 'px; width: ' + size + 'px;';
+
               ripple.rippleContainer.appendChild(rippler);
+
+              // rippler.style.webkitTransform = 'scale(0)';
+              // rippler.style.transform = 'scale(0)';
+              // rippler.style.borderRadius = '100%';
+              // rippler.style.position = 'abbsolute';
+              // rippler.style.opacity = '.5';
+              // rippler.style.backgroundColor = 'rgba(0, 0, 0, 0.1)';
+              // rippler.style.webkitAnimation = 'ripple 1000ms';
+              // rippler.style.animation = 'ripple 1000ms';
 
           return rippler.setAttribute('style', style);
         }
@@ -86,7 +96,7 @@ const VueRippler = {
   }
 }
 
-export default VueRippler
+export default VueRippler;
 
 if (typeof window !== 'undefined' && window.Vue) {
   window.Vue.use(VueRippler);
