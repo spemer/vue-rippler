@@ -2,7 +2,7 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
-  entry: './docs/src/main.js',
+  entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
@@ -15,6 +15,22 @@ module.exports = {
         use: [
           'vue-style-loader',
           'css-loader'
+        ],
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          'vue-style-loader',
+          'css-loader',
+          'sass-loader'
+        ],
+      },
+      {
+        test: /\.sass$/,
+        use: [
+          'vue-style-loader',
+          'css-loader',
+          'sass-loader?indentedSyntax'
         ],
       },
       {
@@ -32,7 +48,7 @@ module.exports = {
                 loader: 'sass-loader',
                 options: {
                   data: `
-                    @import "./docs/src/style/style.scss";
+                    @import "./src/style/style.scss";
                   `
                 }
               }

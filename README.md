@@ -2,8 +2,8 @@
 
 > Simple Vue.js plugin for custom ripple effect
 
-[![Codeship](https://img.shields.io/codeship/3a192ae0-9502-0134-8f6e-1e693cf3975e/master.svg)](https://www.npmjs.com/package/vue-rippler)
 [![Version](https://img.shields.io/npm/v/vue-rippler.svg)](https://www.npmjs.com/package/vue-rippler)
+[![Gzipsize](https://img.badgesize.io/spemer/vue-rippler/master/src/vue-rippler.js?compression=gzip)](https://www.npmjs.com/package/vue-rippler)
 [![License](https://img.shields.io/npm/l/vue-rippler.svg)](https://www.npmjs.com/package/vue-rippler)
 
 [Live Demo](https://spemer.github.io/vue-rippler/)
