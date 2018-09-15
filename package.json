@@ -20,6 +20,18 @@
   "dependencies": {
     "vue": "^2.5.11"
   },
+  "keywords": [
+    "VueJs",
+    "Vue",
+    "Js",
+    "JavaScript",
+    "Ripple",
+    "Plugin",
+    "Library",
+    "Material",
+    "Design",
+    "Button"
+  ],
   "browserslist": [
     "> 1%",
     "last 2 versions",
