@@ -37,7 +37,9 @@ Vue.use(VueRippler)
 
 ``` css
 <style>
-/* play with some lines below */
+/*
+play with some lines below
+*/
 [ripple] .ripple--container span {
   -webkit-transform: scale(0);
           transform: scale(0);

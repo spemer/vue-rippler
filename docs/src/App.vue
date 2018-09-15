@@ -1,5 +1,7 @@
 <template>
-  <div class="example" ripple="ripple"></div>
+  <div class="example" ripple="ripple">
+    <p>Click me!</p>
+  </div>
 </template>
 
 <script>
@@ -8,16 +10,38 @@ export default {
 }
 </script>
 
-<style>
-.example {
-  width: 320px;
-  height: 80px;
-  outline: none;
-  margin: 0 auto;
-  cursor: pointer;
-  background-color: #42b883;
+<style lang="scss">
+body {
+  margin: 0;
+  height: 100vh;
+  position: relative;
+
+  .example {
+    top: 50%;
+    width: 320px;
+    height: 80px;
+    margin: auto;
+    outline: none;
+    display: table;
+    cursor: pointer;
+    position: absolute;
+    border-radius: 80px;
+    transform: translateY(-50%);
+    background-color: #42b883;
+
+    p {
+      color: white;
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+      font-family: sans-serif;
+    }
+  }
 }
 
+
+
+// ripple
 [ripple] .ripple--container span {
   -webkit-transform: scale(0);
           transform: scale(0);
