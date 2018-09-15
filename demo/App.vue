@@ -8,7 +8,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style>
 .example {
   width: 160px;
   height: 40px;

@@ -1,7 +1,7 @@
 {
   "name": "vue-rippler",
   "description": "vue-rippler",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "author": "spemer <ghsspower@naver.com>",
   "license": "MIT",
   "private": false,
@@ -45,8 +45,6 @@
     "cross-env": "^5.0.5",
     "css-loader": "^0.28.7",
     "file-loader": "^1.1.4",
-    "node-sass": "^4.5.3",
-    "sass-loader": "^6.0.6",
     "vue-loader": "^13.0.5",
     "vue-template-compiler": "^2.4.4",
     "webpack": "^3.6.0",
