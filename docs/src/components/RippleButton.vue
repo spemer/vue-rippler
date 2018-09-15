@@ -24,7 +24,7 @@ export default {
 
     .example {
       top: 50%;
-      width: 320px;
+      width: $grid80x;
       height: $grid20x;
       margin: auto;
       outline: none;
@@ -34,6 +34,10 @@ export default {
       border-radius: $grid20x;
       transform: translateY(-50%);
       background-color: #42b883;
+
+      @media #{$pablet} {
+        width: $grid64x;
+      }
 
       p {
         color: white;

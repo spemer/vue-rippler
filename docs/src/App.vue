@@ -24,6 +24,6 @@ export default {
 
 <style lang="scss">
 .header__below {
-  margin-top: $grid14x + $grid8x;
+  margin-top: $grid14x + $grid16x;
 }
 </style>

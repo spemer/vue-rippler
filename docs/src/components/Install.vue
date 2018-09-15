@@ -45,6 +45,10 @@ export default {
       margin: $grid8x auto;
       background-color: $texteee;
 
+      @media #{$pablet} {
+        width: 100%;
+      }
+
       .install__code--text {
         text-align: center;
         display: table-cell;
