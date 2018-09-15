@@ -23,8 +23,8 @@ export default {
           transform: scale(0);
   border-radius: 100%;
   position: absolute;
-  opacity: 1;
-  background-color: rgba(255, 255, 255, 0.1);
+  opacity: 0.75 !important;
+  background-color: rgba(0, 0, 0, 0.1) !important;
   -webkit-animation: ripple 1000ms;
           animation: ripple 1000ms;
 }
