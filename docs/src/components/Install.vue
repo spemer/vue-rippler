@@ -3,10 +3,10 @@
     div.container
       div.install__code--wrapper(
         @click="toast"
-        v-clipboard:copy="'npm i ' + name"
+        v-clipboard:copy="'npm i ' + name + ' --save'"
         v-tooltip.bottom="{content: 'Click to copy', delay: {show: 500, hide: 100}}"
       )
-        p.install__code--text.code npm i {{ name }}
+        p.install__code--text.code npm i {{ name }} --save
 </template>
 
 <script>
