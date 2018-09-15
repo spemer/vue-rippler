@@ -1,0 +1,66 @@
+<template>
+  <div>
+    <div class="ex" ripple="ripple"></div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'app',
+}
+</script>
+
+<style lang="scss">
+.ex {
+  width: 160px;
+  height: 40px;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid #999;
+  background-color: #fff;
+
+  &:hover {
+    background-color: #eee;
+  }
+}
+
+[ripple] {
+  position: relative;
+  overflow: hidden;
+}
+
+[ripple] .ripple--container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+[ripple] .ripple--container span {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  border-radius: 100%;
+  position: absolute;
+  opacity: 0.78;
+  background-color: rgba(0, 0, 0, 0.08);
+  -webkit-animation: ripple 1000ms;
+          animation: ripple 1000ms;
+}
+
+@-webkit-keyframes ripple {
+  to {
+    opacity: 0;
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+}
+
+@keyframes ripple {
+  to {
+    opacity: 0;
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+}
+</style>
