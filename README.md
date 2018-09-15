@@ -3,7 +3,6 @@
 > Simple Vue.js plugin for custom ripple effect
 
 [![Codeship](https://img.shields.io/codeship/3a192ae0-9502-0134-8f6e-1e693cf3975e/master.svg)](https://www.npmjs.com/package/vue-rippler)
-[![Coverage Status](https://coveralls.io/repos/github/spemer/vue-rippler/badge.svg?branch=master)](https://coveralls.io/github/spemer/vue-rippler?branch=master)
 [![Version](https://img.shields.io/npm/v/vue-rippler.svg)](https://www.npmjs.com/package/vue-rippler)
 [![License](https://img.shields.io/npm/l/vue-rippler.svg)](https://www.npmjs.com/package/vue-rippler)
 
@@ -17,7 +16,7 @@ npm i vue-rippler --save
 
 ``` javascript
 // main.js
-
+import Vue from 'vue'
 import VueRippler from 'vue-rippler'
 
 Vue.use(VueRippler)
@@ -27,7 +26,6 @@ Vue.use(VueRippler)
 
 ``` javascript
 // Vue.js template
-
 <template>
   <my-component ripple="ripple"></my-component>
 </template>
@@ -38,7 +36,6 @@ Vue.use(VueRippler)
 ``` css
 <style>
 /* play with some lines below */
-
 [ripple] .ripple--container span {
   -webkit-transform: scale(0);
           transform: scale(0);
