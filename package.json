@@ -1,7 +1,7 @@
 {
   "name": "vue-rippler",
   "description": "vue-rippler",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "author": "spemer <ghsspower@naver.com>",
   "license": "MIT",
   "private": false,
@@ -26,6 +26,7 @@
     "Js",
     "JavaScript",
     "Ripple",
+    "Effect",
     "Plugin",
     "Library",
     "Material",

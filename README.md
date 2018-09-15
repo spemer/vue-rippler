@@ -10,13 +10,16 @@
 ## Installation
 
 ``` bash
-npm i vue-rippler
+npm i vue-rippler --save
 ```
 
 ## Usage
 
 ``` javascript
+// main.js
+
 import VueRippler from 'vue-rippler'
+
 Vue.use(VueRippler)
 ```
 
@@ -24,6 +27,7 @@ Vue.use(VueRippler)
 
 ``` javascript
 // Vue.js template
+
 <template>
   <my-component ripple="ripple"></my-component>
 </template>
@@ -33,19 +37,7 @@ Vue.use(VueRippler)
 
 ``` css
 <style>
-/* play with lines below */
-[ripple] {
-  position: relative;
-  overflow: hidden;
-}
-
-[ripple] .ripple--container {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
+/* play with some lines below */
 
 [ripple] .ripple--container span {
   -webkit-transform: scale(0);
