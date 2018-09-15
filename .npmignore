@@ -1,1 +1,16 @@
+.DS_Store
+node_modules/
+.env
+*.log
+*.cache
+
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
 docs/
+.editorconfig
+.babelrc
+.git
