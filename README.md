@@ -64,3 +64,7 @@ Vue.use(VueRippler)
 }
 </style>
 ```
+
+### Author
+
+- [Hyouk Seo](https://github.com/spemer)

@@ -45,8 +45,8 @@ const VueRippler = {
 
               size = ripple.offsetWidth;
               pos = ripple.getBoundingClientRect();
-              x = e.pageX - pos.left - (size / 2);
-              y = e.pageY - pos.top - (size / 2);
+              x = e.clientX - pos.left - (size / 2);
+              y = e.clientY - pos.top - (size / 2);
               style = 'top:' + y + 'px;left: ' + x + 'px; height: ' + size + 'px; width: ' + size + 'px;';
               ripple.rippleContainer.appendChild(rippler);
 
