@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <div class="ex" ripple="ripple"></div>
+  <div class="example" ripple="ripple">
   </div>
 </template>
 
@@ -11,17 +10,13 @@ export default {
 </script>
 
 <style lang="scss">
-.ex {
+.example {
   width: 160px;
   height: 40px;
   outline: none;
   cursor: pointer;
   border: 1px solid #999;
   background-color: #fff;
-
-  &:hover {
-    background-color: #eee;
-  }
 }
 
 [ripple] {
@@ -42,8 +37,8 @@ export default {
           transform: scale(0);
   border-radius: 100%;
   position: absolute;
-  opacity: 0.78;
-  background-color: rgba(0, 0, 0, 0.08);
+  opacity: 0.5;
+  background-color: rgba(0, 0, 0, 0.1);
   -webkit-animation: ripple 1000ms;
           animation: ripple 1000ms;
 }
@@ -63,4 +58,5 @@ export default {
             transform: scale(2);
   }
 }
+
 </style>

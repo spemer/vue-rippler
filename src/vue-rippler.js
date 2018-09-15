@@ -21,13 +21,13 @@ const VueRippler = {
             var args,
                 context
 
-            context = this
-            args = arguments
-            clearTimeout(inDebounce)
+                context = this
+                args = arguments
+                clearTimeout(inDebounce)
 
-            return inDebounce = setTimeout(function() {
-              return func.apply(context, args)
-            }, delay)
+                return inDebounce = setTimeout(function() {
+                  return func.apply(context, args)
+                }, delay)
           }
         }
 
@@ -40,14 +40,24 @@ const VueRippler = {
               x,
               y;
 
-          ripple = this
-          rippler = document.createElement('span')
-          size = ripple.offsetWidth
-          pos = ripple.getBoundingClientRect()
-          x = e.pageX - pos.left - (size / 2)
-          y = e.pageY - pos.top - (size / 2)
-          style = 'top:' + y + 'px; left: ' + x + 'px; height: ' + size + 'px; width: ' + size + 'px;'
-          ripple.rippleContainer.appendChild(rippler)
+              ripple = this
+              rippler = document.createElement('span')
+
+              // rippler.style.webkitTransform = 'scale(0)';
+              // rippler.style.transform =       'scale(0)';
+              // rippler.style.borderRadius = '100%';
+              // rippler.style.position = 'absolute';
+              // rippler.style.opacity = '0.5';
+              // rippler.style.backgroundColor = 'rgba(0, 0, 0, 0.1)';
+              // rippler.style.webkitAnimation = 'ripple 1000ms';
+              // rippler.style.animation =       'ripple 1000ms';
+
+              size = ripple.offsetWidth
+              pos = ripple.getBoundingClientRect()
+              x = e.pageX - pos.left - (size / 2)
+              y = e.pageY - pos.top - (size / 2)
+              style = 'top:' + y + 'px;left: ' + x + 'px; height: ' + size + 'px; width: ' + size + 'px;'
+              ripple.rippleContainer.appendChild(rippler)
 
           return rippler.setAttribute('style', style)
         }
@@ -62,8 +72,19 @@ const VueRippler = {
 
         for (i = 0, len = ripples.length; i < len; i++) {
           ripple = ripples[i]
+
+          // ripple.style.position = 'relative';
+          // ripple.style.overflow = 'hidden';
+
           rippleContainer = document.createElement('div')
           rippleContainer.className = 'ripple--container'
+
+          // rippleContainer.style.position = 'absolute';
+          // rippleContainer.style.top = '0';
+          // rippleContainer.style.right = '0';
+          // rippleContainer.style.bottom = '0';
+          // rippleContainer.style.left = '0';
+
           ripple.addEventListener('mousedown', showRipple)
           ripple.addEventListener('mouseup', debounce(cleanUp, 2000))
           ripple.rippleContainer = rippleContainer

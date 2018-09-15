@@ -1,10 +1,11 @@
 {
   "name": "vue-rippler",
   "description": "vue-rippler",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "author": "spemer <ghsspower@naver.com>",
   "license": "MIT",
-  "private": true,
+  "private": false,
+  "main": "src/vue-rippler.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/spemer/vue-rippler.git"

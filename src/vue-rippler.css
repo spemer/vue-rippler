@@ -1,31 +1,3 @@
-# vue-rippler
-
-> Simple & clean Vue.js plugin for custom ripple effect
-
-## Installation
-
-``` bash
-npm i vue-rippler
-```
-
-## Usage
-
-``` javascript
-import VueRippler from 'vue-rippler'
-Vue.use(VueRippler)
-```
-
-### Use in component
-
-``` javascript
-// Vue.js template
-<template>
-  <my-component ripple="ripple"></my-component>
-</template>
-```
-
-``` css
-<style>
 [ripple] {
   position: relative;
   overflow: hidden;
@@ -65,5 +37,3 @@ Vue.use(VueRippler)
             transform: scale(2);
   }
 }
-</style>
-```

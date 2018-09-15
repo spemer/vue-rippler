@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
-import VueRippler from './vue-rippler'
+import VueRippler from '../src/vue-rippler'
 
 Vue.use(VueRippler)
 
