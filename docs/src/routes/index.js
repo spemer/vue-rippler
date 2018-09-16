@@ -8,13 +8,13 @@ export default new VueRouter({
   mode: 'history',
   routes: [
     {
-      path: '/',
+      path: '/vue-router',
       name: 'app',
       component: App
     },
     {
       path: '*',
-      redirect: App
+      redirect: '/vue-router'
     },
   ]
 })

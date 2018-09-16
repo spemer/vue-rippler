@@ -3,7 +3,7 @@
     div.container
       div.header__logo
         router-link.header__logo--link(
-          :to="'/'"
+          :to="'/vue-router'"
           v-scroll-to="{el: 'body', duration: 0}"
           v-tooltip="{content: 'Top', delay: {show: 500, hide: 100}}"
         )
