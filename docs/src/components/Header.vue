@@ -37,6 +37,7 @@ export default {
     cursor: pointer;
     height: $grid14x;
     display: inline-block;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
 
     .header__logo--img {
       padding: $grid2x 0;

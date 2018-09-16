@@ -60,6 +60,7 @@ export default {
       height: $grid12x;
       margin: $grid12x auto;
       background-color: $texteee;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
 
       @media #{$pablet} {
         width: 100%;

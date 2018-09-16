@@ -51,6 +51,7 @@ html {
   @include font-settings();
   @include font-stack-html();
   @include font-size($grid4x);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
 }
 
 
@@ -60,6 +61,7 @@ html {
 a {
   color: $brand;
   text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
 
   &:hover {
     color: $brand-hover;
