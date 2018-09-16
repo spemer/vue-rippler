@@ -11,7 +11,7 @@
 export default {
   data () {
     return {
-      metaURI: 'https://github.com/spemer/vue-rippler/blob/master/docs/dist/metacard.png?raw=true'
+      metaURI: 'https://github.com/spemer/vue-rippler/blob/master/docs/src/assets/metacard.png?raw=true'
     }
   },
 
