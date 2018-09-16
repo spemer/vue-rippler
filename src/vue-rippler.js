@@ -1,55 +1,49 @@
-const VueRippler = {
-  install: (Vue, options) => {
+var VueRippler = {
+  install: function install(Vue, options) {
 
-  	Vue.mixin({
-      mounted() {
-        let removeRipple,
-            debounce,
-            length,
-            ripple,
-            rippleContainer,
-            ripples,
-            makeRipple;
+    Vue.mixin({
+      mounted: function mounted() {
+        var removeRipple, debounce, length, ripple, rippleContainer, ripples, makeRipple;
 
-        debounce = function(func, delay) {
-          let inDebounce = undefined;
+        debounce = function debounce(func, delay) {
+          var inDebounce = undefined;
 
-          return function() {
-            let context = this;
-            let args = arguments;
+          return function () {
+            var context = this;
+            var args = arguments;
             clearTimeout(inDebounce);
 
-            return inDebounce = setTimeout(function() {
+            return inDebounce = setTimeout(function () {
               return func.apply(context, args);
             }, delay);
-          }
-        }
+          };
+        };
 
-        makeRipple = function(e) {
-          let ripple = this;
-          let setRipple = document.createElement('span');
+        makeRipple = function makeRipple(e) {
+          var ripple = this;
+          var setRipple = document.createElement('span');
 
-          let size = ripple.offsetWidth;
-          let pos = ripple.getBoundingClientRect();
-          let x = e.clientX - pos.left - (size / 2);
-          let y = e.clientY - pos.top - (size / 2);
-          let style = 'top:' + y + 'px;left: ' + x + 'px; height: ' + size + 'px; width: ' + size + 'px;';
+          var size = ripple.offsetWidth;
+          var pos = ripple.getBoundingClientRect();
+          var x = e.clientX - pos.left - size / 2;
+          var y = e.clientY - pos.top - size / 2;
+          var style = 'top:' + y + 'px;left: ' + x + 'px; height: ' + size + 'px; width: ' + size + 'px;';
 
           ripple.rippleContainer.appendChild(setRipple);
 
           return setRipple.setAttribute('style', style);
-        }
+        };
 
-        removeRipple = function() {
+        removeRipple = function removeRipple() {
           while (this.rippleContainer.firstChild) {
             this.rippleContainer.removeChild(this.rippleContainer.firstChild);
           }
-        }
+        };
 
         ripples = document.querySelectorAll('[ripple]');
 
-        for (let i = 0, length = ripples.length; i < length; i++) {
-          ripple = ripples[i]
+        for (var i = 0, length = ripples.length; i < length; i++) {
+          ripple = ripples[i];
 
           // set ripple parent style
           ripple.style.zIndex = '100';
@@ -73,7 +67,7 @@ const VueRippler = {
         }
 
         // ripple style
-        let styleEl = document.createElement('style');
+        var styleEl = document.createElement('style');
         styleEl.innerHTML = '\
           [ripple] .ripple--container span {\
             -webkit-transform: scale(0);\
