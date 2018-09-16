@@ -1,4 +1,4 @@
-# vue-rippler
+# vue-rippler 🎉
 
 > Simple Vue.js plugin for custom ripple effect
 
