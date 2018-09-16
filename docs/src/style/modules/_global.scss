@@ -101,6 +101,14 @@ button {
   outline: none;
   cursor: pointer;
   background-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+
+  &:focus,
+  &:active, {
+    border: none;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+  }
 }
 
 .code {

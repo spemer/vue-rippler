@@ -33,7 +33,8 @@ export default {
       position: absolute;
       border-radius: $grid20x;
       transform: translateY(-50%);
-      background-color: #42b883;
+      background-color: $brand;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
 
       @media #{$pablet} {
         width: $grid64x;

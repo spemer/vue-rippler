@@ -74,16 +74,11 @@ export default {
     .footer__sns {
 
       .footer__sns--link {
-        color: $text333;
+        color: $text999;
         margin-top: $grid4x;
         transition: all .25s ease;
         padding: 0 $grid4x $grid4x $grid4x;
         @include font-size($grid6x);
-
-        &:hover {
-          color: $text333;
-          @include transform(scale(1.1));
-        }
 
         &#fbIcon {
 
