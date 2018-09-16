@@ -47,8 +47,8 @@ play with some lines below
   position: absolute;
   opacity: 0.75;
   background-color: rgba(0, 0, 0, 0.1);
-  -webkit-animation: ripple 1000ms;
-          animation: ripple 1000ms;
+  -webkit-animation: rippler 1000ms;
+          animation: rippler 1000ms;
 }
 </style>
 ```

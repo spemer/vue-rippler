@@ -3,125 +3,109 @@ const VueRippler = {
 
   	Vue.mixin({
       mounted() {
-        var cleanUp,
+        let removeRipple,
             debounce,
-            i,
-            len,
+            length,
             ripple,
             rippleContainer,
             ripples,
             makeRipple;
 
         debounce = function(func, delay) {
-          var inDebounce;
-
-          inDebounce = undefined;
+          let inDebounce = undefined;
 
           return function() {
-            var args,
-                context;
+            let context = this
+            let args = arguments
+            clearTimeout(inDebounce)
 
-                context = this;
-                args = arguments;
-                clearTimeout(inDebounce);
-
-                return inDebounce = setTimeout(function() {
-                  return func.apply(context, args);
-                }, delay);
+            return inDebounce = setTimeout(function() {
+              return func.apply(context, args)
+            }, delay)
           }
         }
 
         makeRipple = function(e) {
-          var pos,
-              ripple,
-              setRipple,
-              size,
-              style,
-              x,
-              y;
+          let ripple = this
+          let setRipple = document.createElement('span')
 
-              ripple = this;
-              setRipple = document.createElement('span');
+          let size = ripple.offsetWidth
+          let pos = ripple.getBoundingClientRect()
+          let x = e.clientX - pos.left - (size / 2)
+          let y = e.clientY - pos.top - (size / 2)
+          let style = 'top:' + y + 'px;left: ' + x + 'px; height: ' + size + 'px; width: ' + size + 'px;'
 
-              size = ripple.offsetWidth;
-              pos = ripple.getBoundingClientRect();
-              x = e.clientX - pos.left - (size / 2);
-              y = e.clientY - pos.top - (size / 2);
-              style = 'top:' + y + 'px;left: ' + x + 'px; height: ' + size + 'px; width: ' + size + 'px;';
+          ripple.rippleContainer.appendChild(setRipple)
 
-              ripple.rippleContainer.appendChild(setRipple);
-
-          return setRipple.setAttribute('style', style);
+          return setRipple.setAttribute('style', style)
         }
 
-        cleanUp = function() {
-          while (this.rippleContainer.firstChild) {
+        removeRipple = function() {
+          while (this.rippleContainer.firstChild)
             this.rippleContainer.removeChild(this.rippleContainer.firstChild)
-          }
         }
 
-        ripples = document.querySelectorAll('[ripple]');
+        ripples = document.querySelectorAll('[ripple]')
 
-        for (i = 0, len = ripples.length; i < len; i++) {
-          ripple = ripples[i];
+        for (let i = 0, length = ripples.length; i < length; i++) {
+          ripple = ripples[i]
 
           // set ripple parent style
-          ripple.style.zIndex = '10000';
-          ripple.style.position = 'relative';
-          ripple.style.overflow = 'hidden';
+          ripple.style.zIndex = '10000'
+          ripple.style.position = 'relative'
+          ripple.style.overflow = 'hidden'
 
-          rippleContainer = document.createElement('div');
-          rippleContainer.className = 'ripple--container';
+          rippleContainer = document.createElement('div')
+          rippleContainer.className = 'ripple--container'
 
           // set ripple container style
-          rippleContainer.style.position = 'absolute';
-          rippleContainer.style.top = '0';
-          rippleContainer.style.right = '0';
-          rippleContainer.style.bottom = '0';
-          rippleContainer.style.left = '0';
+          rippleContainer.style.position = 'absolute'
+          rippleContainer.style.top = '0'
+          rippleContainer.style.right = '0'
+          rippleContainer.style.bottom = '0'
+          rippleContainer.style.left = '0'
 
-          ripple.addEventListener('mousedown', makeRipple);
-          ripple.addEventListener('mouseup', debounce(cleanUp, 2000));
-          ripple.rippleContainer = rippleContainer;
-          ripple.appendChild(rippleContainer);
+          ripple.addEventListener('mousedown', makeRipple)
+          ripple.addEventListener('mouseup', debounce(removeRipple, 2000))
+          ripple.rippleContainer = rippleContainer
+          ripple.appendChild(rippleContainer)
         }
 
         // ripple style
         let styleEl = document.createElement('style')
         styleEl.innerHTML = '\
-        [ripple] .ripple--container span {\
-          -webkit-transform: scale(0);\
-                  transform: scale(0);\
-          border-radius: 100%;\
-          position: absolute;\
-          opacity: 0.5;\
-          background-color: rgba(0, 0, 0, 0.1);\
-          -webkit-animation: ripple 1000ms;\
-                  animation: ripple 1000ms;\
-        }\
-        @-webkit-keyframes ripple {\
-          to {\
-            opacity: 0;\
-            -webkit-transform: scale(2);\
-                    transform: scale(2);\
+          [ripple] .ripple--container span {\
+            -webkit-transform: scale(0);\
+                    transform: scale(0);\
+            border-radius: 100%;\
+            position: absolute;\
+            opacity: 0.5;\
+            background-color: rgba(0, 0, 0, 0.1);\
+            -webkit-animation: rippler 1000ms;\
+                    animation: rippler 1000ms;\
           }\
-        }\
-        @keyframes ripple {\
-          to {\
-            opacity: 0;\
-            -webkit-transform: scale(2);\
-                    transform: scale(2);\
+          @-webkit-keyframes rippler {\
+            to {\
+              opacity: 0;\
+              -webkit-transform: scale(2);\
+                      transform: scale(2);\
+            }\
           }\
-        }\
-        '
+          @keyframes rippler {\
+            to {\
+              opacity: 0;\
+              -webkit-transform: scale(2);\
+                      transform: scale(2);\
+            }\
+          }'
         document.head.appendChild(styleEl)
       }
     })
   }
 }
 
-export default VueRippler;
+export default VueRippler
 
 if (typeof window !== 'undefined' && window.Vue) {
-  window.Vue.use(VueRippler);
+  window.Vue.use(VueRippler)
 }
