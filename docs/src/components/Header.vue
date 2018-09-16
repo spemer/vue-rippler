@@ -21,8 +21,8 @@ export default {
 
 #header {
   top: 0;
-  z-index: 10;
   width: 100%;
+  z-index: 10000;
   position: fixed;
   height: $grid14x;
   align-items: center;

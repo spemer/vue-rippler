@@ -2,6 +2,7 @@
   div#app
     Header
     Hero.header__below
+    Readme
     Install
     RippleButton
     Footer
@@ -12,6 +13,7 @@ import Header from './components/Header'
 import Install from './components/Install'
 import Hero from './components/Hero'
 import RippleButton from './components/RippleButton'
+import Readme from './components/Readme'
 import Footer from './components/Footer'
 
 export default {
@@ -20,7 +22,8 @@ export default {
     Install,
     Hero,
     RippleButton,
-    Footer
+    Readme,
+    Footer,
   }
 }
 </script>

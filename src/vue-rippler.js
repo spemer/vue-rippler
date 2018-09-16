@@ -51,7 +51,7 @@ const VueRippler = {
           ripple = ripples[i]
 
           // set ripple parent style
-          ripple.style.zIndex = '10000'
+          ripple.style.zIndex = '100'
           ripple.style.position = 'relative'
           ripple.style.overflow = 'hidden'
 
