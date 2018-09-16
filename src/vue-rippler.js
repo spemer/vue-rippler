@@ -46,7 +46,6 @@ var VueRippler = {
           ripple = ripples[i];
 
           // set ripple parent style
-          ripple.style.zIndex = '100';
           ripple.style.position = 'relative';
           ripple.style.overflow = 'hidden';
 
@@ -55,6 +54,7 @@ var VueRippler = {
 
           // set ripple container style
           rippleContainer.style.position = 'absolute';
+          rippleContainer.style.overflow = 'hidden';
           rippleContainer.style.top = '0';
           rippleContainer.style.right = '0';
           rippleContainer.style.bottom = '0';
