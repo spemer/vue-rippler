@@ -3,15 +3,18 @@ node_modules/
 .env
 *.log
 *.cache
+*.sketch
 
 .idea
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
+launcher/
 
 docs/
 .editorconfig
 .babelrc
 .git
 webpack.config.js
+.npmrc

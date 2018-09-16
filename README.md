@@ -14,7 +14,13 @@
 npm i vue-rippler --save
 ```
 
+``` bash
+yarn add vue-rippler
+```
+
 ## Usage
+
+### main.js
 
 ``` javascript
 // main.js
@@ -27,7 +33,7 @@ Vue.use(VueRippler)
 ### Use in component
 
 ``` javascript
-// Vue.js template
+// .vue template
 <template>
   <my-component ripple="ripple"></my-component>
 </template>
@@ -52,6 +58,14 @@ play with some lines below
 }
 </style>
 ```
+
+### CDNs
+
+[jsDelivr](cdn.jsdelivr.net/npm/vue-rippler/)
+
+[unpkg](unpkg.com/vue-rippler/)
+
+[bundle.run](bundle.run/vue-rippler)
 
 ## Author
 
