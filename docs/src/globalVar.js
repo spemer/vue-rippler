@@ -12,6 +12,7 @@ export const globalVar = new Vue ({
 
     githubURL: 'https://github.com/spemer/vue-rippler',
     npmURL: 'https://www.npmjs.com/package/vue-rippler',
+    yarnURL: 'https://yarnpkg.com/en/package/vue-rippler',
 
     jsDelivr: 'https://cdn.jsdelivr.net/npm/vue-rippler/',
     UNPKG: 'https://unpkg.com/vue-rippler/',

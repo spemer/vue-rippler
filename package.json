@@ -1,7 +1,7 @@
 {
   "name": "vue-rippler",
   "description": "Simple Vue.js plugin for custom ripple effect",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "author": "spemer <ghsspower@naver.com>",
   "license": "MIT",
   "private": false,

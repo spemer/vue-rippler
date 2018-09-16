@@ -31,6 +31,7 @@ export default {
       url: {
         GitHub: globalVar.githubURL,
         NPM: globalVar.npmURL,
+        Yarn: globalVar.yarnURL,
       },
       cdn: {
         jsDelivr: globalVar.jsDelivr,
