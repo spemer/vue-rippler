@@ -3,7 +3,7 @@
     div.container
       div.hero__container
         img.hero__container--img(
-          src="../assets/metacard.png"
+          :src="metaURI"
         )
 </template>
 
@@ -11,6 +11,7 @@
 export default {
   data () {
     return {
+      metaURI: 'https://github.com/spemer/vue-rippler/blob/master/docs/dist/metacard.png?raw=true'
     }
   },
 
