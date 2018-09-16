@@ -68,31 +68,7 @@ var VueRippler = {
 
         // ripple style
         var styleEl = document.createElement('style');
-        styleEl.innerHTML = '\
-          [ripple] .ripple--container span {\
-            -webkit-transform: scale(0);\
-                    transform: scale(0);\
-            border-radius: 100%;\
-            position: absolute;\
-            opacity: 0.5;\
-            background-color: rgba(0, 0, 0, 0.1);\
-            -webkit-animation: rippler 1000ms;\
-                    animation: rippler 1000ms;\
-          }\
-          @-webkit-keyframes rippler {\
-            to {\
-              opacity: 0;\
-              -webkit-transform: scale(2);\
-                      transform: scale(2);\
-            }\
-          }\
-          @keyframes rippler {\
-            to {\
-              opacity: 0;\
-              -webkit-transform: scale(2);\
-                      transform: scale(2);\
-            }\
-          }';
+        styleEl.innerHTML = '[ripple] .ripple--container span {-webkit-transform: scale(0);transform: scale(0);border-radius: 100%;position: absolute;opacity: 0.5;background-color: rgba(0, 0, 0, 0.1);-webkit-animation: rippler 1000ms;animation: rippler 1000ms;}@-webkit-keyframes rippler {to {opacity: 0;-webkit-transform: scale(2);transform: scale(2);}}@keyframes rippler {to {opacity: 0;-webkit-transform: scale(2);transform: scale(2);}}';
         document.head.appendChild(styleEl);
       }
     });

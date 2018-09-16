@@ -3,7 +3,8 @@ import Vue from "vue";
 export const globalVar = new Vue ({
   data: {
     name: 'vue-rippler',
-    install: 'npm i vue-rippler --save',
+    npm: 'npm i vue-rippler --save',
+    yarn: 'yarn add vue-rippler',
 
     fbURL: 'https://www.facebook.com/ghsspower',
     igURL: 'https://instagram.com/spemer',
@@ -11,6 +12,10 @@ export const globalVar = new Vue ({
 
     githubURL: 'https://github.com/spemer/vue-rippler',
     npmURL: 'https://www.npmjs.com/package/vue-rippler',
+
+    jsDelivr: 'https://cdn.jsdelivr.net/npm/vue-rippler/',
+    UNPKG: 'https://unpkg.com/vue-rippler/',
+    Bundlr: 'https://bundle.run/vue-rippler',
 
     // gist
     main: 'https://gist.github.com/spemer/f7e46970e19c4a50dea477cec36eb22b.js',

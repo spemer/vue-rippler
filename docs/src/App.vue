@@ -4,6 +4,7 @@
     Hero.header__below
     Readme
     Install
+    Docs
     RippleButton
     Footer
 </template>
@@ -13,6 +14,7 @@ import Header from './components/Header'
 import Hero from './components/Hero'
 import Readme from './components/Readme'
 import Install from './components/Install'
+import Docs from './components/Docs'
 import RippleButton from './components/RippleButton'
 import Footer from './components/Footer'
 
@@ -23,6 +25,7 @@ export default {
     Readme,
     Install,
     RippleButton,
+    Docs,
     Footer,
   }
 }

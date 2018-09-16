@@ -28,6 +28,7 @@ export default {
       margin: 0 auto;
       display: block;
       height: $grid40x;
+      margin-bottom: $grid8x;
     }
   }
 }

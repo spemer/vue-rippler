@@ -20,9 +20,9 @@ yarn add vue-rippler
 
 ### CDNs
 
-[jsDelivr](cdn.jsdelivr.net/npm/vue-rippler/)
-[unpkg](unpkg.com/vue-rippler/)
-[bundle.run](bundle.run/vue-rippler)
+[jsDelivr](https://cdn.jsdelivr.net/npm/vue-rippler/),
+[UNPKG](https://unpkg.com/vue-rippler/),
+[bundle.run](https://bundle.run/vue-rippler)
 
 ## Usage
 
