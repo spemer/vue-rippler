@@ -62,9 +62,7 @@ play with some lines below
 ### CDNs
 
 [jsDelivr](cdn.jsdelivr.net/npm/vue-rippler/)
-
 [unpkg](unpkg.com/vue-rippler/)
-
 [bundle.run](bundle.run/vue-rippler)
 
 ## Author
