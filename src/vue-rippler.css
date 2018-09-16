@@ -17,8 +17,8 @@
           transform: scale(0);
   border-radius: 100%;
   position: absolute;
-  opacity: 0.5 !important;
-  background-color: rgba(0, 0, 0, 0.1) !important;
+  opacity: 0.5;
+  background-color: rgba(0, 0, 0, 0.1);
   -webkit-animation: ripple 1000ms;
           animation: ripple 1000ms;
 }

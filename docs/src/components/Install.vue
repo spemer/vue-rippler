@@ -3,6 +3,7 @@
     div.container
       div.install__code--wrapper(
         @click="toast"
+        ripple="ripple"
         v-clipboard:copy="install"
         v-tooltip.bottom="{content: 'Click to copy', delay: {show: 500, hide: 100}}"
       )

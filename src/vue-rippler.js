@@ -51,15 +51,6 @@ const VueRippler = {
 
               ripple.rippleContainer.appendChild(setRipple);
 
-              // setRipple.style.webkitTransform = 'scale(0)';
-              // setRipple.style.transform = 'scale(0)';
-              // setRipple.style.borderRadius = '100%';
-              // setRipple.style.position = 'abbsolute';
-              // setRipple.style.opacity = '.5';
-              // setRipple.style.backgroundColor = 'rgba(0, 0, 0, 0.1)';
-              // setRipple.style.webkitAnimation = 'ripple 1000ms';
-              // setRipple.style.animation = 'ripple 1000ms';
-
           return setRipple.setAttribute('style', style);
         }
 
@@ -94,6 +85,36 @@ const VueRippler = {
           ripple.rippleContainer = rippleContainer;
           ripple.appendChild(rippleContainer);
         }
+
+        // ripple style
+        let styleEl = document.createElement('style')
+        styleEl.innerHTML = '\
+        [ripple] .ripple--container span {\
+          -webkit-transform: scale(0);\
+                  transform: scale(0);\
+          border-radius: 100%;\
+          position: absolute;\
+          opacity: 0.5;\
+          background-color: rgba(0, 0, 0, 0.1);\
+          -webkit-animation: ripple 1000ms;\
+                  animation: ripple 1000ms;\
+        }\
+        @-webkit-keyframes ripple {\
+          to {\
+            opacity: 0;\
+            -webkit-transform: scale(2);\
+                    transform: scale(2);\
+          }\
+        }\
+        @keyframes ripple {\
+          to {\
+            opacity: 0;\
+            -webkit-transform: scale(2);\
+                    transform: scale(2);\
+          }\
+        }\
+        '
+        document.head.appendChild(styleEl)
       }
     })
   }

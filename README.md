@@ -33,7 +33,7 @@ Vue.use(VueRippler)
 </template>
 ```
 
-### Set ripple style, and customize as you want
+### Set ripple style, and customize as you want(Optional)
 
 ``` css
 <style>
@@ -45,26 +45,10 @@ play with some lines below
           transform: scale(0);
   border-radius: 100%;
   position: absolute;
-  opacity: 0.75 !important;
-  background-color: rgba(0, 0, 0, 0.1) !important;
+  opacity: 0.75;
+  background-color: rgba(0, 0, 0, 0.1);
   -webkit-animation: ripple 1000ms;
           animation: ripple 1000ms;
-}
-
-@-webkit-keyframes ripple {
-  to {
-    opacity: 0;
-    -webkit-transform: scale(2);
-            transform: scale(2);
-  }
-}
-
-@keyframes ripple {
-  to {
-    opacity: 0;
-    -webkit-transform: scale(2);
-            transform: scale(2);
-  }
 }
 </style>
 ```
