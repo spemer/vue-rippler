@@ -10,19 +10,19 @@
 
 <script>
 import Header from './components/Header'
-import Install from './components/Install'
 import Hero from './components/Hero'
-import RippleButton from './components/RippleButton'
 import Readme from './components/Readme'
+import Install from './components/Install'
+import RippleButton from './components/RippleButton'
 import Footer from './components/Footer'
 
 export default {
   components: {
     Header,
-    Install,
     Hero,
-    RippleButton,
     Readme,
+    Install,
+    RippleButton,
     Footer,
   }
 }

@@ -1,10 +1,10 @@
 <template lang="pug">
   div#header
     div.container
-      div.header__logo
-        a.header__logo--link(
-          v-scroll-to="{el: 'body', duration: 0}"
-        )
+      div.header__logo(
+        v-scroll-to="{el: 'body', duration: 0}"
+      )
+        a.header__logo--link
           img.header__logo--img(
             :src="baseURI"
           )
@@ -45,7 +45,7 @@ export default {
     .header__logo--text {
       color: $text333;
       font-weight: 500;
-      margin-left: $grid4x;
+      padding-left: $grid4x;
       display: inline-block;
       transform: translateY(-68%);
       @include font-size($grid5x);
