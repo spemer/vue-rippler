@@ -45,8 +45,8 @@ play with some lines below
           transform: scale(0);
   border-radius: 100%;
   position: absolute;
-  opacity: 0.75;
-  background-color: rgba(0, 0, 0, 0.1);
+  opacity: 0.75 !important;
+  background-color: rgba(0, 0, 0, 0.1) !important;
   -webkit-animation: rippler 1000ms;
           animation: rippler 1000ms;
 }

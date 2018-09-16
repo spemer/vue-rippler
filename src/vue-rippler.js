@@ -1,5 +1,5 @@
 const VueRippler = {
-  install(Vue, options) {
+  install: (Vue, options) => {
 
   	Vue.mixin({
       mounted() {
@@ -15,64 +15,65 @@ const VueRippler = {
           let inDebounce = undefined;
 
           return function() {
-            let context = this
-            let args = arguments
-            clearTimeout(inDebounce)
+            let context = this;
+            let args = arguments;
+            clearTimeout(inDebounce);
 
             return inDebounce = setTimeout(function() {
-              return func.apply(context, args)
-            }, delay)
+              return func.apply(context, args);
+            }, delay);
           }
         }
 
         makeRipple = function(e) {
-          let ripple = this
-          let setRipple = document.createElement('span')
+          let ripple = this;
+          let setRipple = document.createElement('span');
 
-          let size = ripple.offsetWidth
-          let pos = ripple.getBoundingClientRect()
-          let x = e.clientX - pos.left - (size / 2)
-          let y = e.clientY - pos.top - (size / 2)
-          let style = 'top:' + y + 'px;left: ' + x + 'px; height: ' + size + 'px; width: ' + size + 'px;'
+          let size = ripple.offsetWidth;
+          let pos = ripple.getBoundingClientRect();
+          let x = e.clientX - pos.left - (size / 2);
+          let y = e.clientY - pos.top - (size / 2);
+          let style = 'top:' + y + 'px;left: ' + x + 'px; height: ' + size + 'px; width: ' + size + 'px;';
 
-          ripple.rippleContainer.appendChild(setRipple)
+          ripple.rippleContainer.appendChild(setRipple);
 
-          return setRipple.setAttribute('style', style)
+          return setRipple.setAttribute('style', style);
         }
 
         removeRipple = function() {
-          while (this.rippleContainer.firstChild)
-            this.rippleContainer.removeChild(this.rippleContainer.firstChild)
+          while (this.rippleContainer.firstChild) {
+            this.rippleContainer.removeChild(this.rippleContainer.firstChild);
+          }
         }
 
-        ripples = document.querySelectorAll('[ripple]')
+        ripples = document.querySelectorAll('[ripple]');
 
         for (let i = 0, length = ripples.length; i < length; i++) {
           ripple = ripples[i]
 
           // set ripple parent style
-          ripple.style.zIndex = '100'
-          ripple.style.position = 'relative'
-          ripple.style.overflow = 'hidden'
+          ripple.style.zIndex = '100';
+          ripple.style.position = 'relative';
+          ripple.style.overflow = 'hidden';
 
-          rippleContainer = document.createElement('div')
-          rippleContainer.className = 'ripple--container'
+          rippleContainer = document.createElement('div');
+          rippleContainer.className = 'ripple--container';
 
           // set ripple container style
-          rippleContainer.style.position = 'absolute'
-          rippleContainer.style.top = '0'
-          rippleContainer.style.right = '0'
-          rippleContainer.style.bottom = '0'
-          rippleContainer.style.left = '0'
+          rippleContainer.style.position = 'absolute';
+          rippleContainer.style.top = '0';
+          rippleContainer.style.right = '0';
+          rippleContainer.style.bottom = '0';
+          rippleContainer.style.left = '0';
 
-          ripple.addEventListener('mousedown', makeRipple)
-          ripple.addEventListener('mouseup', debounce(removeRipple, 2000))
-          ripple.rippleContainer = rippleContainer
-          ripple.appendChild(rippleContainer)
+          ripple.addEventListener('mousedown', makeRipple);
+          ripple.addEventListener('mouseup', debounce(removeRipple, 2000));
+          ripple.rippleContainer = rippleContainer;
+          ripple.appendChild(rippleContainer);
         }
 
         // ripple style
-        let styleEl = document.createElement('style')
+        let styleEl = document.createElement('style');
         styleEl.innerHTML = '\
           [ripple] .ripple--container span {\
             -webkit-transform: scale(0);\
@@ -97,11 +98,15 @@ const VueRippler = {
               -webkit-transform: scale(2);\
                       transform: scale(2);\
             }\
-          }'
-        document.head.appendChild(styleEl)
+          }';
+        document.head.appendChild(styleEl);
       }
-    })
+    });
   }
-}
+};
 
-export default VueRippler
+if (typeof window !== 'undefined' && window.Vue) {
+  window.VueRippler = VueRippler;
+};
+
+export default VueRippler;
