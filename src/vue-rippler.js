@@ -105,7 +105,3 @@ const VueRippler = {
 }
 
 export default VueRippler
-
-if (typeof window !== 'undefined' && window.Vue) {
-  window.Vue.use(VueRippler)
-}
