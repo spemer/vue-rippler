@@ -1,8 +1,8 @@
 <template lang="pug">
   div#app
     Header
-    Install.header__below
-    //- Gist
+    Hero.header__below
+    Install
     RippleButton
     Footer
 </template>
@@ -10,7 +10,7 @@
 <script>
 import Header from './components/Header'
 import Install from './components/Install'
-// import Gist from './components/Gist'
+import Hero from './components/Hero'
 import RippleButton from './components/RippleButton'
 import Footer from './components/Footer'
 
@@ -18,7 +18,7 @@ export default {
   components: {
     Header,
     Install,
-    // Gist,
+    Hero,
     RippleButton,
     Footer
   }
@@ -27,6 +27,6 @@ export default {
 
 <style lang="scss">
 .header__below {
-  margin-top: $grid14x + $grid28x;
+  margin-top: $grid14x + $grid12x;
 }
 </style>
