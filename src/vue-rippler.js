@@ -3,24 +3,24 @@ var VueRippler = {
 
     Vue.mixin({
       mounted: function mounted() {
-        var removeRipple, debounce, length, ripple, rippleContainer, ripples, makeRipple;
+        var length, ripple, rippleContainer;
 
-        debounce = function debounce(func, delay) {
-          var inDebounce = undefined;
+        var debounce = function debounce(func, delay) {
+          var bounce = undefined;
 
           return function () {
             var context = this;
             var args = arguments;
-            clearTimeout(inDebounce);
+            clearTimeout(bounce);
 
-            return inDebounce = setTimeout(function () {
+            return bounce = setTimeout(function () {
               return func.apply(context, args);
             }, delay);
           };
         };
 
-        makeRipple = function makeRipple(e) {
-          var ripple = this;
+        var makeRipple = function makeRipple(e) {
+          ripple = this;
           var setRipple = document.createElement('span');
 
           var size = ripple.offsetWidth;
@@ -34,24 +34,21 @@ var VueRippler = {
           return setRipple.setAttribute('style', style);
         };
 
-        removeRipple = function removeRipple() {
-          while (this.rippleContainer.firstChild) {
+        var removeRipple = function removeRipple() {
+          while (this.rippleContainer.firstChild)
             this.rippleContainer.removeChild(this.rippleContainer.firstChild);
-          }
         };
 
-        ripples = document.querySelectorAll('[ripple]');
+        var ripples = document.querySelectorAll('[ripple]');
 
         for (var i = 0, length = ripples.length; i < length; i++) {
           ripple = ripples[i];
-
           // set ripple parent style
           ripple.style.position = 'relative';
           ripple.style.overflow = 'hidden';
 
           rippleContainer = document.createElement('div');
           rippleContainer.className = 'ripple--container';
-
           // set ripple container style
           rippleContainer.style.position = 'absolute';
           rippleContainer.style.overflow = 'hidden';
@@ -75,8 +72,7 @@ var VueRippler = {
   }
 };
 
-if (typeof window !== 'undefined' && window.Vue) {
+if (typeof window !== 'undefined' && window.Vue)
   window.VueRippler = VueRippler;
-};
 
 export default VueRippler;

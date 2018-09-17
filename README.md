@@ -53,6 +53,7 @@ Vue.use(VueRippler)
 play with some lines below
 */
 [ripple] .ripple--container span {
+  will-change: transform, opacity;
   -webkit-transform: scale(0);
           transform: scale(0);
   border-radius: 100%;
