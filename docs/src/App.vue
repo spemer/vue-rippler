@@ -1,5 +1,6 @@
 <template lang="pug">
   div#app
+    //- ForkMe
     Header
     Hero.header__below
     Readme
@@ -10,6 +11,7 @@
 </template>
 
 <script>
+// import ForkMe from './components/ForkMe'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import Readme from './components/Readme'
@@ -20,6 +22,7 @@ import Footer from './components/Footer'
 
 export default {
   components: {
+    // ForkMe,
     Header,
     Hero,
     Readme,
