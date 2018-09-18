@@ -1,6 +1,5 @@
 var VueRippler = {
   install: function install(Vue, options) {
-
     Vue.mixin({
       mounted: function mounted() {
         var length,
@@ -24,12 +23,12 @@ var VueRippler = {
         var makeRipple = function makeRipple(e) {
           ripple = this
           var setRipple = document.createElement('span')
-          setRipple.className = 'ripple--body'
+              setRipple.className = 'ripple--body'
 
           var size  = ripple.offsetWidth,
               pos   = ripple.getBoundingClientRect(),
               x     = e.clientX - pos.left - size / 2,
-              y     = e.clientY - pos.top - size / 2,
+              y     = e.clientY - pos.top -  size / 2,
               style = 'top:' + y + 'px;left: ' + x + 'px; height: ' + size + 'px; width: ' + size + 'px;'
 
           ripple.rippleContainer.appendChild(setRipple)
