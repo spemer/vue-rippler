@@ -22,13 +22,13 @@ var VueRippler = {
         var makeRipple = function makeRipple(e) {
           ripple = this;
           var setRipple = document.createElement('span');
-          setRipple.className = 'ripple--body';
+              setRipple.className = 'ripple--body';
 
-          var size = ripple.offsetWidth;
-          var pos = ripple.getBoundingClientRect();
-          var x = e.clientX - pos.left - size / 2;
-          var y = e.clientY - pos.top - size / 2;
-          var style = 'top:' + y + 'px;left: ' + x + 'px; height: ' + size + 'px; width: ' + size + 'px;';
+          var size  = ripple.offsetWidth,
+              pos   = ripple.getBoundingClientRect(),
+              x     = e.clientX - pos.left - size / 2,
+              y     = e.clientY - pos.top - size / 2,
+              style = 'top:' + y + 'px;left: ' + x + 'px; height: ' + size + 'px; width: ' + size + 'px;';
 
           ripple.rippleContainer.appendChild(setRipple);
 
