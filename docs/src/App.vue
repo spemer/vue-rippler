@@ -1,41 +1,14 @@
 <template lang="pug">
   div#app
-    //- ForkMe
-    Header
-    Hero.header__below
-    Readme
-    Install
-    Docs
-    RippleButton
-    Footer
+    Home
 </template>
 
 <script>
-// import ForkMe from './components/ForkMe'
-import Header from './components/Header'
-import Hero from './components/Hero'
-import Readme from './components/Readme'
-import Install from './components/Install'
-import Docs from './components/Docs'
-import RippleButton from './components/RippleButton'
-import Footer from './components/Footer'
+import Home from './page/Home'
 
 export default {
   components: {
-    // ForkMe,
-    Header,
-    Hero,
-    Readme,
-    Install,
-    RippleButton,
-    Docs,
-    Footer,
+    Home
   }
 }
 </script>
-
-<style lang="scss">
-.header__below {
-  margin-top: $grid14x + $grid12x;
-}
-</style>

@@ -52,12 +52,7 @@ Vue.use(VueRippler)
 /*
 play with some lines below
 */
-[ripple] .ripple--container span {
-  will-change: transform, opacity;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  border-radius: 100%;
-  position: absolute;
+[ripple] .ripple--container .ripple--body {
   opacity: 0.5 !important;
   background-color: rgba(0, 0, 0, 0.1) !important;
   -webkit-animation: rippler 1000ms;

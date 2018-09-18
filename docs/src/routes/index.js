@@ -2,15 +2,15 @@
 // import VueRouter from 'vue-router'
 // Vue.use(VueRouter)
 
-// import App from '../App'
+// import Home from '../Home'
 
 // export default new VueRouter({
 //   mode: 'history',
 //   routes: [
 //     {
 //       path: '/vue-router',
-//       name: 'app',
-//       component: App
+//       name: 'Home',
+//       component: Home
 //     },
 //     {
 //       path: '*',

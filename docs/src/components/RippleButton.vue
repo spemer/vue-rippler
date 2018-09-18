@@ -24,16 +24,16 @@ export default {
 
     .example {
       top: 50%;
-      width: $grid80x;
-      height: $grid20x;
       margin: auto;
       outline: none;
       display: table;
       cursor: pointer;
+      width: $grid80x;
+      height: $grid20x;
       position: absolute;
       border-radius: $grid20x;
-      transform: translateY(-50%);
       background-color: $brand;
+      transform: translateY(-50%);
       -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
 
       @media #{$pablet} {

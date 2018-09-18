@@ -22,6 +22,7 @@ var VueRippler = {
         var makeRipple = function makeRipple(e) {
           ripple = this;
           var setRipple = document.createElement('span');
+          setRipple.className = 'ripple--body';
 
           var size = ripple.offsetWidth;
           var pos = ripple.getBoundingClientRect();
@@ -44,18 +45,18 @@ var VueRippler = {
         for (var i = 0, length = ripples.length; i < length; i++) {
           ripple = ripples[i];
           // set ripple parent style
-          ripple.style.position = 'relative';
           ripple.style.overflow = 'hidden';
+          ripple.style.position = 'relative';
 
           rippleContainer = document.createElement('div');
           rippleContainer.className = 'ripple--container';
           // set ripple container style
-          rippleContainer.style.position = 'absolute';
           rippleContainer.style.overflow = 'hidden';
+          rippleContainer.style.position = 'absolute';
           rippleContainer.style.top = '0';
+          rippleContainer.style.left = '0';
           rippleContainer.style.right = '0';
           rippleContainer.style.bottom = '0';
-          rippleContainer.style.left = '0';
 
           ripple.addEventListener('mousedown', makeRipple);
           ripple.addEventListener('mouseup', debounce(removeRipple, 2000));
