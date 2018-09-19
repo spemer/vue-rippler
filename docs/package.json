@@ -40,5 +40,23 @@
     "webpack": "^3.6.0",
     "webpack-dev-server": "^2.9.1"
   },
+  "keywords": [
+    "VueJs",
+    "Vue",
+    "Js",
+    "JavaScript",
+    "Ripple",
+    "Effect",
+    "Plugin",
+    "Library",
+    "Material",
+    "Design",
+    "Button",
+    "CSS",
+    "Spemer",
+    "Hyouk Seo",
+    "NPM",
+    "Yarn"
+  ],
   "homepage": "https://github.com/spemer/vue-rippler#readme"
 }
