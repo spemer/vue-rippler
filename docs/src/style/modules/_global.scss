@@ -115,8 +115,7 @@ button {
 
 .code {
   font-weight: 600;
-  font-family: monospace;
-  -moz-font-family: monospace;
-  -webkit-font-family: monospace;
-  @include font-size($grid5x);
+  -webkit-font-family: Courier, monospace;
+     -moz-font-family: Courier, monospace;
+          font-family: Courier, monospace;
 }
