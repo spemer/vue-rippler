@@ -3,15 +3,14 @@ var VueRippler = {
     Vue.mixin({
       mounted: function mounted() {
         var length,
+            bounce,
             ripple,
             rippleContainer
 
         var debounce = function debounce(func, delay) {
-          var bounce = undefined
-
           return function () {
-            var context = this
-            var args    = arguments
+            var context = this,
+                args    = arguments
             clearTimeout(bounce)
 
             return bounce = setTimeout(function () {
@@ -28,7 +27,7 @@ var VueRippler = {
           var size  = ripple.offsetWidth,
               pos   = ripple.getBoundingClientRect(),
               x     = e.clientX - pos.left - size / 2,
-              y     = e.clientY - pos.top -  size / 2,
+              y     = e.clientY - pos.top  - size / 2,
               style = 'top:' + y + 'px;left: ' + x + 'px; height: ' + size + 'px; width: ' + size + 'px;'
 
           ripple.rippleContainer.appendChild(setRipple)
