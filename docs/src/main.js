@@ -4,7 +4,6 @@ import 'es6-promise/auto'
 
 import Vue from 'vue'
 import App from './App.vue'
-// import router from './routes'
 import VTooltip from 'v-tooltip'
 import Toasted from 'vue-toasted'
 import VueScrollTo from 'vue-scrollto'
@@ -19,6 +18,5 @@ Vue.use(VueClipboard)
 
 new Vue({
   el: '#app',
-  // router,
   render: h => h(App)
 })
