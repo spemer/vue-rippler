@@ -4,7 +4,7 @@
       div.install__code--wrapper(
         v-for="value in dl"
         @click="toast"
-        ripple="ripple"
+        ripple
         v-clipboard:copy="value"
         v-tooltip.bottom="{content: 'Click to copy', delay: {show: 500, hide: 100}}"
       )

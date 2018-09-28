@@ -2,7 +2,7 @@
   div#ripple-button
     div.container
       div.example(
-        ripple="ripple"
+        ripple
       )
         p Click me!
 </template>

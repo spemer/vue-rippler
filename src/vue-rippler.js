@@ -7,7 +7,7 @@ var VueRippler = {
             ripple,
             rippleContainer
 
-        var debounce = function debounce(func, delay) {
+        function debounce(func, delay) {
           return function () {
             var context = this,
                 args    = arguments
@@ -19,7 +19,7 @@ var VueRippler = {
           }
         }
 
-        var makeRipple = function makeRipple(e) {
+        function makeRipple(e) {
           ripple = this
           var setRipple = document.createElement('span')
               setRipple.className = 'ripple--body'
@@ -35,7 +35,7 @@ var VueRippler = {
           return setRipple.setAttribute('style', style)
         }
 
-        var removeRipple = function removeRipple() {
+        function removeRipple() {
           while (this.rippleContainer.firstChild)
             this.rippleContainer.removeChild(this.rippleContainer.firstChild)
         }
