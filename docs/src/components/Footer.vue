@@ -15,7 +15,7 @@
 
         div.footer__copyright
           p.footer__copyright--text
-            | © {{ thisYear }} Hyouk Seo(Spemer). All rights reserved.
+            | ⓒ {{ thisYear }} Hyouk Seo(Spemer). All rights reserved.
 </template>
 
 <script>
