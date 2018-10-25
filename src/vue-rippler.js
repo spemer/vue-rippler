@@ -23,6 +23,7 @@ var VueRippler = {
           ripple = this
           var setRipple = document.createElement('span')
               setRipple.className = 'ripple--body'
+              setRipple.id = 'ripple'
 
           var size  = ripple.offsetWidth,
               pos   = ripple.getBoundingClientRect(),
@@ -68,7 +69,9 @@ var VueRippler = {
 
         var styleEl = document.createElement('style')
         styleEl.innerHTML = '[ripple] .ripple--container .ripple--body {will-change:transform,opacity,auto;zoom:1;overflow:hidden;-webkit-transform:scale(0);-moz-transform:scale(0);-ms-transform:scale(0);-o-transform:scale(0);transform:scale(0);-webkit-border-radius:100%;-moz-border-radius:100%;border-radius:100%;position:absolute;opacity:0.5;background-color:rgba(0,0,0,0.1);-webkit-animation:rippler 1000ms;-moz-animation:rippler 1000ms;-o-animation:rippler 1000ms;animation:rippler 1000ms;}@-webkit-keyframes rippler{to{opacity:0;-webkit-transform:scale(2);transform:scale(2);}}@-moz-keyframes rippler{to{opacity:0;-webkit-transform:scale(2);-moz-transform:scale(2);transform:scale(2);}}@-o-keyframes rippler{to{opacity:0;-webkit-transform:scale(2);-o-transform:scale(2);transform:scale(2);}}@keyframes rippler{to{opacity:0;-webkit-transform:scale(2);-moz-transform:scale(2);-o-transform:scale(2);transform:scale(2);}}'
-        document.head.appendChild(styleEl)
+        styleEl.id = 'ripple-effect-style'
+        if (! document.getElementById('ripple-effect-style'))
+          document.head.appendChild(styleEl)
       }
     })
   }
