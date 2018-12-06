@@ -23,7 +23,6 @@ var VueRippler = {
           ripple = this
           var setRipple = document.createElement('span')
               setRipple.className = 'ripple--body'
-              setRipple.id = 'ripple'
 
           var size  = ripple.offsetWidth,
               pos   = ripple.getBoundingClientRect(),
