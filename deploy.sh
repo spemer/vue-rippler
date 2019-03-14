@@ -1,7 +1,8 @@
 #!/bin/bash
+prjname="vue-rippler"
 
 echo "=============================="
-echo "vue-rippler"
+echo ${prjname}
 echo "=============================="
 
 # docs dir
