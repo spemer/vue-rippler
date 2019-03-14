@@ -1,5 +1,9 @@
 #!/bin/bash
 
+echo "=============================="
+echo "vue-rippler"
+echo "=============================="
+
 # docs dir
 cd docs
 npm run dev
