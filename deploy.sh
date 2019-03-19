@@ -7,10 +7,10 @@ echo "=============================="
 
 # docs dir && run on local server
 cd docs
-# npm run dev
+npm run dev
 
 # build
-# npm run build
+npm run build
 
 # root dir
 cd -
