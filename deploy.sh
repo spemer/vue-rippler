@@ -7,17 +7,17 @@ echo "=============================="
 
 # docs dir && run on local server
 cd docs
-npm run dev
+# npm run dev
 
 # build
-npm run build
+# npm run build
 
 # root dir
 cd -
 
 # get commit message
 printf "\n"
-read -p "Enter commit message: " commitmsg
+IFS= read -r -p "Enter commit message: " commitmsg
 
 # commit
 git add .
