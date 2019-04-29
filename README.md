@@ -9,8 +9,8 @@
 
 [Live Demo](https://spemer.github.io/vue-rippler/)
 
-<!-- ![vue-rippler.gif](https://github.com/spemer/vue-rippler/blob/master/docs/src/assets/vue-rippler.gif) -->
-<img src="https://github.com/spemer/vue-rippler/blob/master/docs/src/assets/vue-rippler.gif" height="25%" width="25%">
+<!-- ![vue-rippler.gif](https://github.com/spemer/vue-rippler/blob/master/docs/src/assets/vue-rippler.gif?raw=true) -->
+<img src="https://github.com/spemer/vue-rippler/blob/master/docs/src/assets/vue-rippler.gif?raw=true" height="25%" width="25%">
 
 ## Installation
 
