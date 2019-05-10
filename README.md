@@ -12,7 +12,7 @@
 <!-- ![vue-rippler.gif](https://github.com/spemer/vue-rippler/blob/master/docs/src/assets/vue-rippler.gif?raw=true) -->
 <img src="https://github.com/spemer/vue-rippler/blob/master/docs/src/assets/vue-rippler.gif?raw=true" height="25%" width="25%">
 
-## ✔ Installation
+## Installation
 
 ``` bash
 npm i vue-rippler --save
@@ -28,7 +28,7 @@ yarn add vue-rippler
 [UNPKG](https://unpkg.com/vue-rippler/),
 [bundle.run](https://bundle.run/vue-rippler)
 
-## ✔ Usage
+## Usage
 
 ### main.js
 
@@ -65,6 +65,6 @@ play with some lines below
 </style>
 ```
 
-## ✔ Author
+## Author
 
 [Hyouk Seo(Spemer)](https://github.com/spemer)
