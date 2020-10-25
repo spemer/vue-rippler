@@ -7,6 +7,7 @@
 [![Gzipsize](https://img.badgesize.io/spemer/vue-rippler/master/src/vue-rippler.js?compression=gzip)](https://www.npmjs.com/package/vue-rippler)
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/vuejs/awesome-vue#miscellaneous)
 [![License](https://img.shields.io/npm/l/vue-rippler.svg)](https://github.com/spemer/vue-rippler)
+[![stargazers](https://img.shields.io/github/stars/spemer/vue-rippler?style=social)](https://github.com/spemer/vue-rippler
 
 [Live Demo](https://spemer.github.io/vue-rippler/)
 
@@ -14,11 +15,11 @@
 
 ## Installation
 
-``` bash
+```bash
 npm i vue-rippler --save
 ```
 
-``` bash
+```bash
 yarn add vue-rippler
 ```
 
@@ -32,26 +33,26 @@ yarn add vue-rippler
 
 ### main.js
 
-``` javascript
+```javascript
 // main.js
-import Vue from 'vue'
-import VueRippler from 'vue-rippler'
+import Vue from "vue";
+import VueRippler from "vue-rippler";
 
-Vue.use(VueRippler)
+Vue.use(VueRippler);
 ```
 
 ### Use in component
 
-``` javascript
+```javascript
 // .vue template
 <template>
-  <my-component ripple></my-component>
+  <my-component ripple />
 </template>
 ```
 
 ### Set ripple style, and customize as you want(Optional)
 
-``` css
+```css
 <style>
 /*
 play with some lines below
